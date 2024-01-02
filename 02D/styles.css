@@ -1,3 +1,40 @@
-.p {
-    color: chocolate;
+h1 {
+    background-color: lightgray;
+}
+
+table {
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+    display: inline;
+    /*width: 100%;*/
+}
+
+th {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+td {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+/*Kalendorius*/
+.menuo {
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.dienos {
+    color: grey;
+    font-weight: bold;
+}
+
+.calendar th {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
 }
