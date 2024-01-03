@@ -1,26 +1,19 @@
 table {
     border-collapse: collapse;
     padding: 5px;
+    margin: auto;
 }
-
-.calendar {
-    margin: 10px;
-    empty-cells: show;
+td {
+    padding: 10px;
 }
-
-thead {
-    /*border: 1px solid black;*/
-}
-
 th {
     background-color: lightgrey;
     color: black;
     text-align: center;
     font-weight: bold;
-
 }
 
-td {
+.calendar td {
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black ;
@@ -37,6 +30,4 @@ h1 {
 }
 
 
-.pagrindinis {
-}
 
