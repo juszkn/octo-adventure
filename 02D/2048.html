@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>2048</title>
+    <style>
+    body {
+        font-size: 40px;
+    }
+
+    .box {
+        font-family: "SF Pro";
+        width: 460px;
+        border: rgba(187, 173, 160, 1);
+        background-color: rgba(187, 173, 160, 1);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .cell {
+
+        width: 100px;
+        height: 100px;
+        background-color: rgba(205, 193, 180, 1);
+        margin: 0;
+    }
+
+    .cell2 {
+        width: 100px;
+        line-height: 100px;
+        background-color: rgba(238, 228, 218, 1);
+        color: rgba(119, 110, 101, 1);
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .cell4 {
+        width: 100px;
+        line-height: 100px;
+        background-color: rgba(238, 225, 201, 1);
+        color: rgba(119, 110, 101, 1);
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .cell8 {
+        width: 100px;
+        line-height: 100px;
+        background-color: rgba(243, 178, 122, 1);
+        color: rgba(249, 246, 242, 1);
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .cell16 {
+        width: 100px;
+        line-height: 100px;
+        background-color: rgba(246, 150, 100, 1);
+        color: rgba(249, 246, 242, 1);
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    </style>
+</head>
+
+
+<body>
+
+<div>
+    <div class="box">
+        <div class="cell">&nbsp;</div>
+        <div class="cell">&nbsp;</div>
+        <div class="cell2">2</div>
+        <div class="cell2">2</div>
+    </div>
+    <div class="box">
+        <div class="cell">&nbsp;</div>
+        <div class="cell">&nbsp;</div>
+        <div class="cell4">4</div>
+        <div class="cell4">4</div>
+    </div>
+    <div class="box">
+        <div class="cell">&nbsp;</div>
+        <div class="cell">&nbsp;</div>
+        <div class="cell4">4</div>
+        <div class="cell8">8</div>
+    </div>
+    <div class="box">
+        <div class="cell2">2</div>
+        <div class="cell4">4</div>
+        <div class="cell8">8</div>
+        <div class="cell16">16</div>
+    </div>
+</div>
+
+</body>
+</html>
