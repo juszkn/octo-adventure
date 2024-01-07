@@ -9,15 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;900&display=swap" rel="stylesheet">
+<!--icons-->
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/twitter.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/google.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css' rel='stylesheet'>
     <style>
 
         body {
-            background-image: url(/02D/clothes-bg.png);
-            border: 3px solid green;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(/02D/clothes-bg.png);
+            /*border: 3px solid green;*/
             max-height: 100%;
             height: 600px;
             display: flex;
             flex-flow: wrap;
+        }
+
+        image {
+            filter: brightness(50%);
         }
 
 
@@ -30,7 +40,6 @@
         .container {
             display: inline-flex;
             width: 100%;
-
         }
 
         .left {
@@ -41,47 +50,85 @@
             align-self: center;
             order: 0;
             margin: 0 auto;
-            width: 326px;
+            width: 316px;
             color: white;
-            font-family: 'Nunito';
             font-weight: bold;
         }
 
         p {
             font-weight: lighter;
+            padding-bottom: 30px;
+            font-family: 'Teko', sans-serif;
         }
 
         .right {
-            /*display: inline-block;*/
-            /*flex-grow: 0;*/
-            /*flex-shrink: 1;*/
-            flex-basis: auto;
             align-self: center;
             order: 0;
             margin: 0 auto;
             width: 300px;
-
-            padding: 20px 20px 20px 20px;
-
+            padding: 30px;
             color: white;
             background-color: #161616;
         }
 
-        .contact_form {
-        }
-
-
         #email, #phone {
-            display: inline;
+            float: left;
             width: 50%;
         }
 
+        input {
+            background-color: rgb(30 30 32);
+            border-style: unset;
+            padding: 8px;
+            gap: 5px;
+            font-family: 'Teko', sans-serif;
+        }
 
+        textarea {
+            background-color: rgb(30 30 32);
+            height: 120px;
+            border-style: unset;
+            padding: 8px;
+            font-family: 'Teko', sans-serif;
+        }
 
+        button {
+            border-style: unset;
+            background-color: green;
+            color: white;
+            height: 35px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        h3 {
+            font-family: 'Teko', sans-serif;
+        }
+
+        sup {
+            text-align: unset;
+        }
+
+        .smalltext {
+            padding-bottom: 15px;
+            font-family: 'Teko', sans-serif;
+        }
+
+        table {
+            float: right;
+            text-align: right;
+            list-style: none;
+        }
+
+        tr {
+            display: flex;
+            gap: 50px;
+        }
     </style>
-
 </head>
-
 <body>
     <div class="container">
         <div class="left">
@@ -90,28 +137,27 @@
         <table>
             <tbody>
                 <tr>
-                    <th>twitter</th>
-                    <th>facebook</th>
-                    <th>Google</th>
-                    <th>Instagram</th>
+                    <th><i class="gg-twitter"></i></th>
+                    <th><i class="gg-facebook"></i></th>
+                    <th><i class="gg-google"></i></th>
+                    <th><i class="gg-instagram"></i></th>
                 </tr>
             </tbody>
         </table>
         </div>
-
         <div class="right">
             <div class="contact_form"></div>
                 <h3>Get a quote</h3>
-                <sup>We will get back to you in 24 hours</sup>
+                <p class="smalltext"><small>We will get back to you in 24 hours</small></p>
                 <div class="form">
                     <input type="text" placeholder="First Name" id="name"/>
                     <input type="text" placeholder="Last Name" id="surname"/>
                     <input type="text" placeholder="Email" id="email"/>
                     <input type="text" placeholder="Phone Number" id="phone"/>
                     <textarea id="subject" name="subject" placeholder="Type message here"></textarea>
+                    <button>Get quote</button>
                 </div>
         </div>
     </div>
-
 </body>
 </html>
