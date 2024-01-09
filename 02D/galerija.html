@@ -10,128 +10,152 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
+            margin: 0;
             background-color: #e5e5e5;
-            flex-direction: column;
         }
 
-        ul {
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
             list-style: none;
             display: flex;
-            gap: 20px;
-
+            gap: 12px;
         }
 
-        nav a:link {
+        nav ul a {
             text-decoration: none;
             font-size: 16px;
-            color: inherit;
+            background-color: white;
+            color: #161616;
+            padding: 8px 15px;
+            display: block;
         }
 
         nav a:hover {
             color: black;
         }
 
+        nav {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
         .box1 {
             background-color: white;
-            width: 200px;
+            width: 203px;
             border-style: solid;
             border-color: white;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
+            margin: 0;
         }
 
         .block {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            width: 900px;
+            gap: 12px;
+            padding: 10px 10px;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .text p {
+            margin: 0;
         }
 
         .text {
-            padding-left: 20px;
-        }
-
-        li {
+            padding: 10px 9px;
             background-color: white;
-            width: 70px;
-            text-align: center;
-            color: #4b5659;
-            padding: 4px;
         }
 
-        li:active {
+        nav ul a.active {
+            background-color: #4b5659;
             color: white;
-            background-color: grey;
         }
     </style>
 </head>
 <body>
-    <nav>
-       <ul>
-            <li><a href="#Show all">Show all</a></li>
-            <li><a href="#nature">Nature</a></li>
-            <li><a href="#cars">Cars</a></li>
-            <li><a href="#people">People</a></li>
-       </ul>
-    </nav>
-    <div class="block">
-        <div class="box1">
-            <div class="picture"><img src="https://fastly.picsum.photos/id/236/200/200.jpg?hmac=BntZCNnsVBEqCPw_5q7AhpFIO2vQrHXcSLFR_C1i4fo" alt="Mountains"></div>
-            <div class="text">
-                <p class="description">Mountains</p>
-                <p class="lower-description">Lorem ipsum dolor..</p>
+    <div class="container">
+        <nav>
+           <ul>
+                <li><a href="#Show all" class="active">Show all</a></li>
+                <li><a href="#nature">Nature</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#people">People</a></li>
+           </ul>
+        </nav>
+        <div class="block">
+            <div class="box1">
+                <div class="picture"><img src="https://fastly.picsum.photos/id/236/200/200.jpg?hmac=BntZCNnsVBEqCPw_5q7AhpFIO2vQrHXcSLFR_C1i4fo" alt="Mountains"></div>
+                <div class="text">
+                    <p class="description">Mountains</p>
+                    <p class="lower-description">Lorem ipsum dolor..</p>
+                </div>
             </div>
-        </div>
-        <div class="box1">
-            <div class="picture"><img src="https://fastly.picsum.photos/id/242/200/200.jpg?hmac=Z3aa8zbEQkEMFgnVh0Pn96vmCZHhJ17qzCrePYksrcY" alt="Rail ways"></div>
-            <div class="text">
-                <p class="description">Rail ways</p>
-                <p class="lower-description">Lorem ipsum dolor..</p>
+            <div class="box1">
+                <div class="picture"><img src="https://fastly.picsum.photos/id/242/200/200.jpg?hmac=Z3aa8zbEQkEMFgnVh0Pn96vmCZHhJ17qzCrePYksrcY" alt="Rail ways"></div>
+                <div class="text">
+                    <p class="description">Rail ways</p>
+                    <p class="lower-description">Lorem ipsum dolor..</p>
+                </div>
             </div>
-        </div>
-        <div class="box1">
-            <div class="picture"><img src="https://fastly.picsum.photos/id/909/200/200.jpg?hmac=MBq84AuRxQbIS381LPxRbG5b7THHQUSRuIupyC6IJGg" alt="Waves"></div>
-            <div class="text">
-                <p class="description">Waves</p>
-                <p class="lower-description">Lorem ipsum dolor..</p>
+            <div class="box1">
+                <div class="picture"><img src="https://fastly.picsum.photos/id/909/200/200.jpg?hmac=MBq84AuRxQbIS381LPxRbG5b7THHQUSRuIupyC6IJGg" alt="Waves"></div>
+                <div class="text">
+                    <p class="description">Waves</p>
+                    <p class="lower-description">Lorem ipsum dolor..</p>
+                </div>
             </div>
-        </div>
-        <div class="box1">
-            <div class="picture"><img src="https://fastly.picsum.photos/id/65/200/200.jpg?hmac=pZrTO_F80X2VYUVpgorpj6xM_WABGhjIXYieK__8B50" alt="Fields"></div>
-            <div class="text">
-                <p class="description">Fields</p>
-                <p class="lower-description">Lorem ipsum dolor..</p>
+            <div class="box1">
+                <div class="picture"><img src="https://fastly.picsum.photos/id/65/200/200.jpg?hmac=pZrTO_F80X2VYUVpgorpj6xM_WABGhjIXYieK__8B50" alt="Fields"></div>
+                <div class="text">
+                    <p class="description">Fields</p>
+                    <p class="lower-description">Lorem ipsum dolor..</p>
+                </div>
             </div>
-        </div>
-        <div class="box1">
-            <div class="picture"><img src="https://fastly.picsum.photos/id/742/200/200.jpg?hmac=4nZLLJ-llxH8rGFtBoMYolYN6ArLNdOU9SGrDLzV1Xw" alt="Liberty"></div>
-            <div class="text">
-                <p class="description">Liberty</p>
-                <p class="lower-description">Lorem ipsum dolor..</p>
+            <div class="box1">
+                <div class="picture"><img src="https://fastly.picsum.photos/id/742/200/200.jpg?hmac=4nZLLJ-llxH8rGFtBoMYolYN6ArLNdOU9SGrDLzV1Xw" alt="Liberty"></div>
+                <div class="text">
+                    <p class="description">Liberty</p>
+                    <p class="lower-description">Lorem ipsum dolor..</p>
+                </div>
             </div>
-        </div>
-        <div class="box1">
-            <div class="picture"><img src="https://fastly.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" alt="Hikes"></div>
-            <div class="text">
-                <p class="description">Hikes</p>
-                <p class="lower-description">Lorem ipsum dolor..</p>
+            <div class="box1">
+                <div class="picture"><img src="https://fastly.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg" alt="Hikes"></div>
+                <div class="text">
+                    <p class="description">Hikes</p>
+                    <p class="lower-description">Lorem ipsum dolor..</p>
+                </div>
             </div>
-        </div>
-        <div class="box1">
-            <div class="picture"><img src="https://fastly.picsum.photos/id/721/200/200.jpg?hmac=QLtStUqefglPXev8bwvDQ34SN-dSYO2_a299oUpbP7g" alt="Sea"></div>
-            <div class="text">
-                <p class="description">Sea</p>
-                <p class="lower-description">Lorem ipsum dolor..</p>
+            <div class="box1">
+                <div class="picture"><img src="https://fastly.picsum.photos/id/721/200/200.jpg?hmac=QLtStUqefglPXev8bwvDQ34SN-dSYO2_a299oUpbP7g" alt="Sea"></div>
+                <div class="text">
+                    <p class="description">Sea</p>
+                    <p class="lower-description">Lorem ipsum dolor..</p>
+                </div>
             </div>
-        </div>
-        <div class="box1">
-            <div class="picture"><img src="https://fastly.picsum.photos/id/959/200/200.jpg?hmac=UDtS3dVizIhIBL6FtIOWaQsq6bJgKWm4f_7SYhWoN9o" alt="Festive"></div>
-            <div class="text">
-                <p class="description">Festive</p>
-                <p class="lower-description">Lorem ipsum dolor..</p>
+            <div class="box1">
+                <div class="picture"><img src="https://fastly.picsum.photos/id/959/200/200.jpg?hmac=UDtS3dVizIhIBL6FtIOWaQsq6bJgKWm4f_7SYhWoN9o" alt="Festive"></div>
+                <div class="text">
+                    <p class="description">Festive</p>
+                    <p class="lower-description">Lorem ipsum dolor..</p>
+                </div>
             </div>
         </div>
     </div>

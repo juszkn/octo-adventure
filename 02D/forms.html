@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>Login form</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(255, 105, 186, 0.96);
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            width: 330px;
+            padding: 20px;
+            box-shadow: 5px 10px;
+            background-color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .property {
+            display: flex;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+        }
+
+        .login {
+            display: block;
+            padding: 10px 20px;
+            background-color: rgba(255, 105, 186, 0.96);
+            width: 50%;
+            text-align: center;
+            color: white;
+        }
+
+        .signup {
+            display: block;
+            padding: 10px 20px;
+            background-color: white;
+            width: 50%;
+            border: solid grey;
+            text-align: center;
+            color: #161616;
+        }
+
+        .form {
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+        }
+
+        input {
+            padding: 10px 20px;
+        }
+
+        .forgotP {
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 15px;
+            font-size: 13px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: rgba(255, 105, 186, 0.96);
+            border-style: unset;
+            color: white;
+            font-weight: bold;
+        }
+
+        .notMember {
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        .forgotP, .notMember a {
+            color: rgba(255, 105, 186, 0.96);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Login Form</h1>
+        </div>
+        <div class="property">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="signup">Signup</a>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Email">
+            <br>
+            <input type="Password" placeholder="Password">
+        </div>
+        <div class="forgotP">
+            <a href="#" class="forgotP">Forgot password?</a>
+        </div>
+        <button>Login</button>
+        <div class="notMember">
+            <p>Not a member? <a href="#" class="forgotP">Signup now</a> </p>
+        </div>
+    </div>
+</body>
+</html>
