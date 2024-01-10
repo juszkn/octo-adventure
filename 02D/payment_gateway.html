@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Payment Gateway</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2086f8;
+        }
+
+        .payment {
+            font-family: 'Ubuntu', sans-serif;
+            width: 290px;
+            background-color: #f8f8f8;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        h1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            font-size: 25px;
+        }
+
+        h5 {
+            margin-bottom: 5px;
+        }
+
+        input {
+            border-style: none;
+            height: 30px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .holder-input {
+            display: inline-flex;
+            width: 100%;
+            background-color: white;
+            border-style: solid;
+            color: darkgray;
+
+        }
+
+        .expiry-input {
+            display: inline-flex;
+            background-color: white;
+            border-style: solid;
+            color: darkgray;
+        }
+
+        .expiry-cvc {
+            display: inline-flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            padding-left: 5px;
+            background-color: white;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        button {
+            width: 100%;
+            color: white;
+            background-color: #2086f8;
+            border-style: none;
+            height: 35px;
+            margin: 35px 0px 0px 0px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment">
+        <h1>Payment Gateway</h1>
+        <div class="holder">
+            <div class="holder-row">
+                <h5>Card holder:</h5>
+                <div class="holder-input">
+                    <i class="bi bi-person-fill"></i>
+                    <input type="text" placeholder="Coding Market">
+                </div>
+            </div>
+        </div>
+        <div class="number-row">
+            <h5>Card number:</h5>
+            <div class="holder-input">
+                <i class="bi bi-credit-card"></i>
+                <input type="text" placeholder="Coding Number">
+            </div>
+        </div>
+        <div class="expiry-cvc">
+            <div class="Expiry">
+                <h5>Expiry date:</h5>
+                <div class="expiry-input">
+                    <i class="bi bi-calendar2-week"></i>
+                    <input type="text" placeholder="00 / 00">
+                </div>
+            </div>
+            <div class="CVC">
+                <h5>CVC:</h5>
+                <div class="expiry-input">
+                    <i class="bi bi-lock-fill"></i>
+                    <input type="text" placeholder="000">
+                </div>
+            </div>
+        </div>
+        <button>Pay</button>
+    </div>
+</body>
+</html>
