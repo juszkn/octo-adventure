@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Mastercard</title>
+    <style>
+        body {
+            background-color: #e3f2fd;
+        }
+
+        .container {
+            height: 350px;
+            width: 600px;
+            margin: 120px auto 0;
+            background-color: white;
+            padding: 20px;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .header-box {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .number-box{
+            width: 50%;
+        }
+
+        .edit-box {
+            display: flex;
+            justify-content: right;
+            width: 50%;
+        }
+
+        .header-box i {
+            padding-right: 5px;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        small {
+            font-size: 10px;
+            color: #b6b6b6;
+        }
+
+        .card-row {
+            display: flex;
+            height: 36px;
+            border: 1px ridge #ffffff;
+            background-color: #fafafa;
+        }
+
+        .mastercard {
+            display: block;
+            margin: auto;
+            padding-left: 5px;
+            padding-top: 1px;
+            text-align: center
+        }
+
+        .card-row input {
+            border: none;
+            width: 100%;
+            padding-left: 10px;
+            background-color: #fafafa;
+        }
+
+        .Expiry-box, .CVC-box, .Name-box {
+            display: flex;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .expiry-secondary, .CVC-secondary, .Name-secondary  {
+            width: 50%;
+        }
+
+        .expiry-third {
+            display: inline-flex;
+            justify-content: right;
+            align-items: center;
+            gap: 10px;
+            width: 50%;
+        }
+
+        .Expiry-box input {
+            width: 130px;
+            height: 30px;
+            margin: 0;
+            text-align: center;
+            border: 1px solid lightgray;
+            font-weight: bold;
+        }
+        
+        .CVC-third, .Name-third {
+            display: inline-flex;
+            justify-content: right;
+            align-items: center;
+            width: 50%;
+        }
+
+        .CVC-third input, .Name-third input {
+            width: 263px;
+            height: 30px;
+            border-style: none;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .CVC-fourth, .Name-fourth {
+            border: 1px solid lightgray;
+            padding-right: 10px;
+        }
+
+        .container a {
+            text-decoration: none;
+        }
+        
+        button {
+            margin-top: 48px;
+            height: 34px;
+            width: 100%;
+            background-color: #2862ff;
+            border-style: unset;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header-box">
+            <div class="number-box">
+                <h3>Card Number</h3>
+                <small>Enter 16-digit card number on the card</small>
+            </div>
+            <div class="edit-box">
+                <a href="#"><i class="bi bi-pencil"></i>Edit</a>
+            </div>
+        </div>
+
+        <div class="card-row">
+            <div class="mastercard">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"/><path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"/><path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"/></svg>
+            </div>
+            <input type="number" placeholder="LT51651651651651651">
+        </div>
+
+        <div class="Expiry-box">
+            <div class="expiry-secondary">
+                <h3>Expiry Date</h3>
+                <small>Enter 16-digit card number on the card</small>
+            </div>
+            <div class="expiry-third">
+                <input type="text" placeholder="MM">
+                 /
+                <input type="text" placeholder="YY">
+            </div>
+        </div>
+
+        <div class="CVC-box">
+            <div class="CVC-secondary">
+                <h3>CVC Number</h3>
+                <small>Enter card verification code from the back of the card</small>
+            </div>
+            <div class="CVC-third">
+                <div class="CVC-fourth">
+                    <input type="text">
+                    <i class="bi bi-eye"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="Name-box">
+            <div class="Name-secondary">
+                <h3>Cardholder Name</h3>
+                <small>Enter cardholder's name</small>
+            </div>
+            <div class="Name-third">
+                <div class="Name-fourth">
+                    <input type="text" placeholder="CARDHOLDER NAME">
+                    <i class="bi bi-person"></i>
+                </div>
+            </div>
+        </div>
+        <button>Pay Now</button>
+    </div>
+
+
+</body>
+</html>
