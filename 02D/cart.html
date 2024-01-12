@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>Cart</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding-top: 20px;
+        }
+        
+        main {
+            width: 1000px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tr {
+            border-style: solid;
+            border-width: 1px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-color: #dadada;
+        }
+
+        .heading {
+            height: 40px;
+            background-color: #f4f5f7;
+            text-align: left;
+        }
+
+        img {
+            padding: 10px 10px 10px 0px;
+        }
+
+        .product {
+            width: 20px;
+        }
+
+        .price {
+            width: 300px;
+        }
+
+        .counter {
+            background-color: transparent;
+            border: none;
+            padding: 10px;
+        }
+
+        .items tr:last-child, .total tr:last-child  {
+            border-bottom: none;
+        }
+
+        .button-row {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .left {
+            display: flex;
+            width: 50%;
+            justify-content: left;
+        }
+
+        .left button {
+            background-color: #161616;
+            color: white;
+            border: none;
+            width: 190px;
+        }
+
+        .right button {
+            background-color: white;
+            color: black;
+            border-color: black;
+            border-width: 1px;
+            width: 140px;
+        }
+
+        .right {
+            display: flex;
+            width: 50%;
+            justify-content: right;
+        }
+
+        .total-box {
+            width: 350px;
+        }
+
+        .total {
+
+            background-color: #f4f5f7;
+        }
+
+        .total td {
+            height: 40px;
+        }
+
+        .left2 {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .right2 {
+            text-align: right;
+        }
+
+        .corners {
+            padding: 20px;
+            border-color: #dadada;
+            border-style: solid;
+            border-width: 1px;
+            background-color: #f4f5f7;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .checkout {
+            background-color: #161616;
+            color: white;
+            border: none;
+            height: 40px;
+            width: 100%;
+        }
+
+        .box-right {
+            display: flex;
+            justify-content: right;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <table class="items">
+            <tbody>
+                <tr class="heading">
+                    <th>&nbsp;</th>
+                    <th>Product</th>
+                    <th class="price">Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td class="product"><img src="/02D/nuotraukos/table1.png" alt=""></td>
+                    <td>Plant pots</td>
+                    <td>$17.00</td>
+                    <td>
+                        <button class="counter">-</button>
+                        <span>2</span>
+                        <button class="counter">+</button>
+                    </td>
+                    <td>£ 635.00</td>
+                </tr>
+                <tr>
+                    <td class="product"><img src="/02D/nuotraukos/table2.png" alt=""></td>
+                    <td>Teapot with black tea</td>
+                    <td>$14.00</td>
+                    <td>
+                        <button class="counter">-</button>
+                        <span>2</span>
+                        <button class="counter">+</button>
+                    </td>
+                    <td>£ 635.00</td>
+                </tr>
+                <tr>
+                    <td class="product"><img src="/02D/nuotraukos/table3.png" alt=""></td>
+                    <td>Wooden flowerpot</td>
+                    <td>$14.00</td>
+                    <td>
+                        <button class="counter">-</button>
+                        <span>2</span>
+                        <button class="counter">+</button>
+                    </td>
+                    <td>£ 635.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="button-row">
+            <div class="left">
+                <button>Continue shopping</button>
+            </div>
+            <div class="right">
+                <button>Update cart</button>
+            </div>
+        </div>
+        <div class="box-right">
+            <div class="total-box">
+                <div class="corners">
+                <table class="total">
+                    <tbody>
+                        <tr>
+                            <td class="left2">Subtotal</td>
+                            <td class="right2">$ 87.00</td>
+                        </tr>
+                        <tr>
+                            <td class="left2">Total</td>
+                            <td class="right2">$ 87.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <button class="checkout">Proceed to check out</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
