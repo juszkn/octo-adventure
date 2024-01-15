@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>Contact form</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #4b5659;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            background-color: white;
+            width: 1440px;
+            height: 912px;
+            flex-shrink: 0;
+            border-radius: 50px;
+            box-shadow: 0px 141px 200px -80px rgba(25, 58, 75, 0.30);
+            position: relative;
+        }
+
+        .rectangle {
+            width: 419px;
+            height: 912px;
+            flex-shrink: 0;
+            background: #6DE1C2;
+            border-radius: 0px 50px 50px 0px;
+            margin-left: 1021px;
+            position: absolute;
+        }
+
+        .heading {
+            width: 545px;
+            margin-top: 36px;
+            margin-left: 98px;
+        }
+
+        .contact_form {
+            width: 345px;
+            margin-top: 24px;
+            margin-left: 95px;
+        }
+
+        p {
+            color: #000;
+            font-family: Montserrat,sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 171.429% */
+            letter-spacing: 0.14px;
+        }
+
+        h1 {
+            color: #000;
+            font-family: Montserrat,sans-serif;
+            font-size: 46px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px; /* 52.174% */
+            letter-spacing: 0.46px;
+        }
+
+        .touch {
+            color: #6DE1C2;
+            font-family: Montserrat,sans-serif;
+            font-size: 46px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.46px;
+        }
+
+        .contact-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 20px;
+            /*padding-right: 799px;*/
+            width: 548px;
+        }
+
+        .inline {
+            display: flex;
+            gap: 24px;
+            width: 558px;
+        }
+
+        .inline-1 {
+            height: 57px;
+            width: 357px;
+        }
+
+        .inline-2 {
+            width: 167px;
+            height: 57px;
+        }
+
+        input {
+            display: flex;
+            padding: 12px 0px;
+            padding-left: 10px;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 548px;
+            height: 57px;
+            border-width: 0px 0px 1px 0px;
+        }
+
+        .description {
+            margin-top: 24px;
+        }
+
+        .attachment-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 548px;
+            margin-top: 9px;
+            margin-left: 95px;
+            border: #737B7D;
+            border-width: 1px;
+            border-style: dashed;
+            padding: 40px 16px 40px 16px;
+            color: #8E8E8E;
+            gap: 24px;
+        }
+
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .notice {
+            margin-left: 98px;
+            margin-top: 7px;
+            color: #8E8E8E;
+            font-family: Inter, sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 20.8px */
+            letter-spacing: 0.5px;
+        }
+
+        .check-row {
+            display: inline-flex;
+            padding: 12px 16px 12px 4px;
+            align-items: center;
+            gap: 8px;
+            width: 365px;
+            height: 48px;
+            margin-left: 90px;
+            margin-top: 19px;
+        }
+
+        input#scales.check-box {
+            width: 16px;
+            height: 16px;
+        }
+
+        button {
+            margin-top: 7px;
+            margin-left: 97px;
+            width: 100%;
+            padding: 16px 0px;
+            gap: 10px;
+            border-radius: 10px;
+            background: #0982FE;
+            border: none;
+            color: white;
+            text-align: center;
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%; /* 22.4px */
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .icons {
+            display: inline-flex;
+            margin-left: 90px;
+            margin-top: 16px;
+            gap: 50px;
+            width: 560px;
+
+        }
+
+        .phone, .email, .helpdesk {
+            display: flex;
+            height: 40px;
+            gap: 15px;
+        }
+
+        .phone p {
+            display: flex;
+            color: black;
+            font-family: Montserrat, sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px; /* 153.846% */
+            letter-spacing: 0.26px;
+        }
+
+        .box span {
+            color: #DD5471;
+            font-family: Montserrat, sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.26px;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .right {
+            position: relative;
+            top: 40px; right: -185px;
+        }
+
+        .map {
+            top: 50px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="left">
+                <div class="rectangle"></div>
+                <div class="contact-box">
+                    <div class="heading">
+                        <h1>Get in <span class="touch">touch</span></h1>
+                        <p class="description">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
+                    </div>
+                    <div class="contact_form">
+                        <input type="text" placeholder="Contact name">
+                        <input type="text" placeholder="Street">
+                        <div class="inline">
+                            <input class="inline-1" type="text" placeholder="City">
+                            <input class="inline-2" type="text" placeholder="Postcode">
+                        </div>
+                        <input type="text" placeholder="Contact Phone">
+                        <input type="text" placeholder="E-mail">
+                        <input type="text" placeholder="Let’s talk about your idea">
+                    </div>
+                    <div class="attachment-box">
+                        <input type="file" name="file" id="file" class="inputfile" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#737B7D" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 8L12 3L7 8" stroke="#737B7D" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 3V15" stroke="#737B7D" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <label for="file">Upload additional file</label>
+                    </div>
+                    <div class="notice">Attach file. File size of your documents should not exceed 10MB</div>
+                    <div class="check-row">
+                        <input class="check-box" type="checkbox" id="scales" name="scales"/>
+                        <label for="scales">I want to protect my data by signing an NDA</label>
+                    </div>
+                    <button>SUBMIT</button>
+                    <div class="icons">
+                        <div class="phone">
+                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                                <path d="M16.2047 0.424255V2.35269C18.1121 2.35269 19.899 2.8348 21.5654 3.79902C23.1516 4.74315 24.4165 6.00869 25.3601 7.59563C26.3238 9.26292 26.8057 11.0507 26.8057 12.9591H28.7332C28.7332 10.6892 28.1609 8.57994 27.0165 6.63141C25.9122 4.74315 24.4165 3.2466 22.5292 2.14177C20.5816 0.99676 18.4735 0.424255 16.2047 0.424255ZM6.23611 3.31691C5.69401 3.31691 5.22219 3.48766 4.82064 3.82915L1.71863 6.99299L1.80898 6.93273C1.30704 7.35458 0.97576 7.87686 0.815138 8.49959C0.674594 9.12231 0.71475 9.72495 0.935604 10.3075C1.49778 11.8743 2.25069 13.4814 3.19434 15.1286C4.51947 17.3985 6.09557 19.4374 7.92264 21.2453C10.854 24.1983 14.4981 26.5285 18.8549 28.2359H18.8851C19.4673 28.4368 20.0496 28.477 20.6318 28.3565C21.2341 28.2359 21.7662 27.9748 22.228 27.573L25.2698 24.5297C25.6713 24.128 25.8721 23.6358 25.8721 23.0533C25.8721 22.4506 25.6713 21.9484 25.2698 21.5467L21.3245 17.5693C20.9229 17.1675 20.421 16.9666 19.8187 16.9666C19.2163 16.9666 18.7144 17.1675 18.3128 17.5693L16.4155 19.4977C14.8896 18.7745 13.5645 17.8806 12.4401 16.816C11.3158 15.7312 10.4223 14.4155 9.75975 12.8687L11.6872 10.9403C12.1088 10.4983 12.3196 9.97604 12.3196 9.37341C12.3196 8.75068 12.0787 8.24849 11.5969 7.86682L11.6872 7.95721L7.65159 3.82915C7.25003 3.48766 6.77821 3.31691 6.23611 3.31691ZM16.2047 4.28113V6.20957C17.4294 6.20957 18.5538 6.51088 19.5777 7.11352C20.6218 7.71616 21.445 8.53976 22.0473 9.58433C22.6496 10.6088 22.9508 11.7337 22.9508 12.9591H24.8782C24.8782 11.3922 24.4867 9.93587 23.7037 8.58998C22.9207 7.28427 21.8766 6.2397 20.5716 5.45627C19.2264 4.67284 17.7707 4.28113 16.2047 4.28113ZM6.23611 5.24535C6.29635 5.24535 6.36662 5.27548 6.44693 5.33574L10.3922 9.37341C10.4123 9.45376 10.3922 9.52407 10.332 9.58433L7.47089 12.4167L7.6817 13.0194L8.07322 13.8631C8.39446 14.546 8.7659 15.2089 9.18753 15.8518C9.76978 16.7557 10.4123 17.5291 11.115 18.1719C12.0586 19.0959 13.193 19.9396 14.5182 20.703C15.1807 21.0846 15.7429 21.3659 16.2047 21.5467L16.807 21.8179L19.7283 18.8951C19.7685 18.8549 19.7986 18.8348 19.8187 18.8348C19.8387 18.8348 19.8689 18.8549 19.909 18.8951L23.9747 22.9629C24.0149 23.003 24.035 23.0332 24.035 23.0533C24.035 23.0533 24.0149 23.0733 23.9747 23.1135L20.9631 26.0966C20.5214 26.4782 20.0395 26.5787 19.5175 26.3979C15.4217 24.8109 12.0084 22.6415 9.27788 19.8894C7.59136 18.202 6.11565 16.2836 4.85075 14.1342C3.94726 12.5875 3.24454 11.0909 2.7426 9.64459V9.61446C2.66228 9.43367 2.65225 9.22275 2.71248 8.98169C2.77271 8.72055 2.88314 8.51967 3.04376 8.37906L6.0253 5.33574C6.08553 5.27548 6.1558 5.24535 6.23611 5.24535ZM16.2047 8.138V10.0664C17.0078 10.0664 17.6904 10.3477 18.2526 10.9101C18.8148 11.4726 19.0959 12.1556 19.0959 12.9591H21.0233C21.0233 12.0953 20.8025 11.2918 20.3608 10.5485C19.9391 9.8053 19.3569 9.22275 18.614 8.8009C17.8711 8.35897 17.068 8.138 16.2047 8.138Z" fill="black"/>
+                            </svg></div>
+                            <div class="box">Phone<br><span>111 111 111</span></div>
+                        </div>
+                        <div class="email">
+                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M7.95455 2.625V4.59624L1.75 8.63565V25.375H26.5682V8.63565L20.3636 4.59624V2.625H7.95455ZM10.0227 4.69318H18.2955V12.6428L14.1591 15.3249L10.0227 12.6428V4.69318ZM11.0568 6.76136V8.82955H17.2614V6.76136H11.0568ZM7.95455 7.0522V11.2855L4.6907 9.18501L7.95455 7.0522ZM20.3636 7.0522L23.6275 9.18501L20.3636 11.2855V7.0522ZM11.0568 9.86364V11.9318H17.2614V9.86364H11.0568ZM3.81818 11.0916L14.1591 17.7809L24.5 11.0916V23.3068H3.81818V11.0916Z" fill="black"/>
+                            </svg></div>
+                            <div class="box">E-MAIL<br><span>info@company.com</span></div>
+                        </div>
+                        <div class="helpdesk">
+                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M7.95455 2.625V4.59624L1.75 8.63565V25.375H26.5682V8.63565L20.3636 4.59624V2.625H7.95455ZM10.0227 4.69318H18.2955V12.6428L14.1591 15.3249L10.0227 12.6428V4.69318ZM11.0568 6.76136V8.82955H17.2614V6.76136H11.0568ZM7.95455 7.0522V11.2855L4.6907 9.18501L7.95455 7.0522ZM20.3636 7.0522L23.6275 9.18501L20.3636 11.2855V7.0522ZM11.0568 9.86364V11.9318H17.2614V9.86364H11.0568ZM3.81818 11.0916L14.1591 17.7809L24.5 11.0916V23.3068H3.81818V11.0916Z" fill="black"/>
+                            </svg></div>
+                            <div class="box">HELPDESK<br><span>https://helpdesk.com</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="map"><img src="/02D/nuotraukos/map.png"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
