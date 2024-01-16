@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Cards</title>
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            background-color: #ffeeba;
+        }
+
+        .container {
+            display: flex;
+            margin: 0;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .box {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .card-1,
+        .card-2,
+        .card-3,
+        .card-4 {
+            transition: all ease-in 500ms;
+            width: 250px;
+            height: 350px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .card-1:hover {
+            background-color: #ffd960;
+            box-shadow: rgb(224, 193, 77) 0px 25px 50px -12px;
+            border-radius: 0px 20px 0px 0px;
+        }
+
+        .card-2:hover {
+            transition: all ease-in 500ms;
+            background-color: #84d7b4;
+            box-shadow: rgb(110, 197, 154) 0px 25px 50px -12px;
+            border-radius: 0px 20px 0px 0px;
+        }
+
+        .card-3:hover {
+            transition: all ease-in 500ms;
+            background-color: #b58dfd;
+            box-shadow: rgb(181, 141, 253) 0px 25px 50px -12px;
+            border-radius: 0px 20px 0px 0px;
+        }
+
+        .card-4:hover {
+            transition: all ease-in 500ms;
+            background-color: #83affc;
+            box-shadow: rgb(131, 175, 252) 0px 25px 50px -12px;
+            border-radius: 0px 20px 0px 0px;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: lighter;
+            width: 100%;
+        }
+
+        .round-1 {
+            display: flex;
+            justify-content: center;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #ffeeba;
+        }
+
+        .round-2 {
+            display: flex;
+            justify-content: center;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #b9f9d3;
+        }
+
+        .round-3 {
+            display: flex;
+            justify-content: center;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #ceb2fc;
+        }
+
+        .round-4 {
+            display: flex;
+            justify-content: center;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #dbe9ff;
+        }
+
+        .circle {
+            border: solid #ffeeba 2px;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .circle-2 {
+            border: solid #b9f9d3 2px;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .circle-3 {
+            border: solid #ceb2fc 2px;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .circle-4 {
+            border: solid #dbe9ff 2px;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        img {
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card-1">
+            <div class="box">
+                <div class="circle">
+                    <div class="round-1">
+                        <img src="/02D/nuotraukos/1.svg" alt="">
+                    </div>
+                </div>
+                <h1>Education</h1>
+            </div>
+        </div>
+        <div class="card-2">
+            <div class="box">
+                <div class="circle-2">
+                    <div class="round-2">
+                        <img src="/02D/nuotraukos/2.svg" alt="">
+                    </div>
+                </div>
+                <h1>Credentialing</h1>
+            </div>
+        </div>
+        <div class="card-3">
+            <div class="box">
+                <div class="circle-3">
+                    <div class="round-3">
+                        <img src="/02D/nuotraukos/3.svg" alt="">
+                    </div>
+                </div>
+                <h1>Wallet</h1>
+            </div>
+        </div>
+        <div class="card-4">
+            <div class="box">
+                <div class="circle-4">
+                    <div class="round-4">
+                        <img src="/02D/nuotraukos/4.svg" alt="">
+                    </div>
+                </div>
+                <h1>Human resources</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
