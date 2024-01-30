@@ -87,4 +87,5 @@ document.write(episode);
 
 document.write('<h3>Devinta uzduotis:</h3>');
 
-// let abc = 'abcdefghijklmnopqrstuvwxyz';
+let abc = 'abcdefghijklmnopqrstuvwxyz';
+document.write(abc[rand(0, abc.length - 1)] + abc[rand(0, abc.length - 1)] + abc[rand(0, abc.length - 1)]);
