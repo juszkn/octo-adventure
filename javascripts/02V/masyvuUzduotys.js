@@ -220,5 +220,88 @@ const unoArray = [rand(5, 25), rand(5, 25)];
 for(let i = 2; i < 10; i++) {
     unoArray[i] = unoArray[i - 1] + unoArray[i - 2];
 }
-
 document.write(unoArray);
+
+
+document.write(`<h3>Septinta užduotis</h3>`);
+// Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 200.
+// Suskaičiuokite kiek yra kiekvienos raidės.
+
+let randAbc = [];
+const raides = ["A", "B", "C", "D"];
+
+let kiekisA = 0;
+let kiekisB = 0;
+let kiekisC = 0;
+let kiekisD = 0;
+
+for (let i = 0; i < 200; i++) {
+    randAbc.push(raides[rand(0, raides.length - 1)])
+    if (randAbc[i] === "A") {
+        kiekisA++;
+    }
+    if (randAbc[i] === "B") {
+        kiekisB++;
+    }
+    if (randAbc[i] === "C") {
+        kiekisC++;
+    }
+    if (randAbc[i] === "D") {
+        kiekisD++;
+    }
+}
+document.write(`A: ${kiekisA}, B: ${kiekisB}, C: ${kiekisC}, D: ${kiekisD}`);
+console.log(randAbc);
+
+document.write(`<h3>Aštunta užduotis</h3>`);
+// Išrūšiuokite 7 uždavinio masyvą pagal abecėlę.
+
+const filtruotas = randAbc.sort();
+console.log(filtruotas);
+
+document.write(`<h3>Devinta užduotis</h3>`);
+// Sugeneruokite 3 masyvus pagal 7 uždavinio sąlygą. 
+// Sudėkite masyvus, sudėdami reikšmes pagal atitinkamus indeksus.
+
+// Paskaičiuokite kiek unikalių (po vieną, nesikartojančių) reikšmių 
+// ir kiek unikalių kombinacijų gavote.
+
+//Pvz.
+// [‘AAA’, ‘BBB’, ‘CCC’, ‘ACC’] = Viena unikali reikšmė “ACC”
+// [‘ACA’, ‘ABA’, ‘ACA’, ‘ADA’] = Dvi unikalios kombinacijos “ABA” ir “ADA”
+// [‘A’, ‘D’, ‘B’]
+// [‘B’, ‘A’, ‘D’]
+// [‘A’, ‘C’, ‘B’]
+
+const arrayFirst = ["A", "B", "C", "D"];
+
+const newArrayss = [];
+const newArrayDu = [];
+const newArrayTrys = [];
+
+for(let i = 0; i < 200; i++){
+
+    newArrayss.push(arrayFirst[rand(0, arrayFirst.length - 1)]);
+    newArrayDu.push(arrayFirst[rand(0, arrayFirst.length - 1)]);
+    newArrayTrys.push(arrayFirst[rand(0, arrayFirst.length - 1)]);
+}
+
+const raidziuMasyvas = [];
+for(let i = 0; i < 200; i++) {
+    raidziuMasyvas.push(newArrayss[i] + newArrayDu[i] +  newArrayTrys[i]);
+}
+
+console.log(raidziuMasyvas);
+
+// Apdorojimas
+
+const tikUnikaliosReiksmes = [];
+
+for(let i = 0; i < raidziuMasyvas.length; i++) {
+    if(raidziuMasyvas[i] === "AAA" || raidziuMasyvas[i] === "CCC" || raidziuMasyvas[i] === "DDD")
+        continue;
+    
+    tikUnikaliosReiksmes.push(raidziuMasyvas[i]);
+}
+
+console.log(tikUnikaliosReiksmes);
