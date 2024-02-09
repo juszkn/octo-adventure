@@ -24,24 +24,39 @@ console.log(array);
 let sum = 0;
 
 for(let i = 0; i < array.length; i++) {
-    for(let x = 0; x < 5; x++) {
+    for(let x = 0; x < array[x].length; x++) {
         if (array[i][x] > 10)
             sum++
     }
 }
 console.log(sum);
 
+//  naudojant reduce 
+
+didesni = array.reduce(
+    (didesniP, array) =>
+        didesniP +
+        array.reduce((didesniA, val) => (val > 10 ? didesniA + 1 : didesniA), 0),
+    0
+);
+console.log(didesni);
+
 // Raskite didžiausio elemento reikšmę;                             2b↓
 
 let max = 0;
 
 for(let i = 0; i < array.length; i++) {
-    for(let x = 0; x < 5; x++) {
+    for(let x = 0; x < array[x].length; x++) {
         if(array [x][i] > max)
             max = array[x][i];
     }
 }
 console.log (max);
+
+// naudojant Math.max
+
+let maxNum = Math.max(...array.flat())
+console.log(maxNum);
 
 // Suskaičiuokite kiekvieno antro lygio masyvų su vienodais indeksais sumas
 // (t.y. suma reikšmių turinčių indeksą 0, 1 ir t.t.)               2c↓
@@ -55,36 +70,59 @@ for (let i = 0; i < array.length; i++) {
 }
 console.log(sumos);
 
+// Naudojant funkcija
+
+const columnSum = (array) => {
+    const sumArray = [];
+    for (let i = 0; i < array[i].length; i++) {
+        let sum = 0;
+        for (let j = 0; x < array.length; x++) {
+            sum += array[x][i];
+        }
+        sumArray.push(sum);
+    }
+    return sumArray;
+}
 
 // Visus antro lygio masyvus “pailginkite” iki 7 elementų           2d↓
 
 for (let i = 0; i < array.length; i++) {
     for (let x = 0; x < 2; x++) {
-     number = rand(0, 1)
+     number = rand(5, 25)
         array[i].push(number);
     }
 }
 console.log(array);
+
+// funkcija 
+
+// const extendSecondLevels = (arrayWithChildArrays) => {
+//     for (let i = 0; i < arrayWithChildArrays.length; i++) {
+//         arrayWithChildArrays[i] = [...arrayWithChildArrays[i], rand(5, 25), rand(5, 25)];
+//     }
+//     return arrayWithChildArrays;
+// }
+//
+// console.log(extendSecondLevels(generate2dArray()));
 
 // Suskaičiuokite kiekvieno iš antro lygio masyvų elementų sumą atskirai 
 // ir sumas panaudokite kaip reikšmes sukuriant naują masyvą.
 // T.y. pirma naujo masyvo reikšmė turi būti lygi mažesnio masyvo,
 // turinčio indeksą 0 dideliame masyve, visų elementų sumai         2e↓
 
-const secondaryArray = [];
+const rowSums = [];
 
-for (let i = 0; i < array.length; i++) {
-    for (let x = 0; x < 10; x++) {
-        
-        secondaryArray.push();
+for(let i = 0; i < array.length; y++) {
+    let sum = 0;
+    
+    for(let x = 0; x < array[x].length; x++) {
+        sum += array[i][x];
     }
+    rowSums.push(sum);
+    break;
 }
-console.log(secondaryArray);
+console.log(`${rowSums}`);
 
-
-
-
-//  equalIndexSums[i] += arrayWithChildArrays[i][ii];
 
 //Sukurkite masyvą iš 10 elementų. Kiekvienas masyvo elementas turi būti
 // masyvas su atsitiktiniu kiekiu nuo 2 iki 20 elementų.
@@ -92,20 +130,33 @@ console.log(secondaryArray);
 // Išrūšiuokite antro lygio masyvus pagal abėcėlę (t.y. tuos kur su raidėm).
 //                                                                   3↓
 
-const thirdArray = [];
-    
-    for (let c = 0; c < 10; c++) {
-        thirdArray[c] = [];
-        let numb = rand(2, 20);
-            for(let b = 0; b < rand(2, 20); b++) {
-                let r = Math.floor(Math.random() * 26);
-                let strinChar = String.fromCharCode(65 + r);
-                thirdArray[c].push(strinChar);
-        }
-    }
-    
-    console.log(thirdArray);
+// const thirdArray = [];
+//    
+//     for (let c = 0; c < 10; c++) {
+//         thirdArray[c] = [];
+//         let numb = rand(2, 20);
+//             for(let b = 0; b < rand(2, 20); b++) {
+//                 let r = Math.floor(Math.random() * 26);
+//                 let strinChar = String.fromCharCode(65 + r);
+//                 thirdArray[c].push(strinChar);
+//         }
+//     }
+//    
+//     console.log(thirdArray);
 
+const raidziuMasyvas = [];
+let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+for(let i = 0; i < 10; i++) {
+    raidziuMasyvas[i] = [];
+    const ilgis= rand(2, 20);
+
+    for(let x = 0; x < ilgis; x++) {
+        raidziuMasyvas[i][x] = letters[rand(0, letters.length - 1)];
+    }
+}
+
+console.log(raidziuMasyvas);
 
 // Išrūšiuokite trečio uždavinio pirmo lygio masyvą taip, kad elementai
 // kurių masyvai trumpiausi eitų pradžioje. 
@@ -141,3 +192,27 @@ ar3.sort((a, b) => {
 });
 
 console.log(ar3);
+
+for(let i = 0; i < raidziuMasyvas.length; i++) {
+    raidziuMasyvas[i].sort();
+}
+console.log(raidziuMasyvas);
+
+const tempArray = [15, 4, 5, 400, 1500];
+
+tempArray.sort(function (pirma,antra) {
+   return 1;
+   return 0;
+   return -100;
+   
+});
+console.log(tempArray);
+
+
+raidziuMasyvas.sort(function (a, b) {
+    return a.length - b.length;
+});
+console.log(raidziuMasyvas);
+
+raidziuMasyvas.sort((a, b) => a.length - b.length);
+console.log(raidziuMasyvas);
