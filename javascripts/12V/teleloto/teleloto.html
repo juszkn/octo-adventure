@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>teleloto</title>
+<!-- JS script -->
+    <script src="teleloto.js" defer></script>
+<!-- CSS -->
+    <style>
+        #loto {
+            display:flex;
+            justify-content:center;
+            flex-direction: row-reverse;
+            gap:10px;
+        }
+
+        .result {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        button {
+            align-items: center;
+            background-color: #2086f8;
+            border: none;
+            color: white;
+            height: 40px;
+            width: 150px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="result"></div>
+<div class="container">
+    <button id="loto" class="buttons">Ridenti kamuoliuką</button>
+</div>
+
+</body>
+</html>
