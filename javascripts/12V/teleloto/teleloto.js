@@ -1,32 +1,40 @@
-// Sukurkite mygtuką: "Ridenti kamuoliuką" ant kurio paspaudus būtų
-// generuojamas atsitiktinis skaičius nuo 0 iki 100.
-
 function rand(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-const arrayFinal = [];
 
-document.querySelector('#loto').onclick = (number) => {
-    const array = [];
+let auksinis = rand(0, 99);
+console.log(auksinis);
+
+document.querySelector('#lotto').onclick = (number) => {
+    const skaicius = rand(0, 99);
     
-    for(let i = 0; i < arrayFinal.length; i++) {
-        array[i] = rand(0, 99);
-        arrayFinal.push(array[i]);
-        console.log(arrayFinal);
+    if (skaicius <= 19) {
+        
+        document.querySelector('.kamuoliukai').innerHTML += `<div style="background-color:black; color:white" class="kamuoliukas"> 
+        ${skaicius}</div>`;
+
+    } else if (skaicius > 20 && skaicius <= 39) {
+        document.querySelector('.kamuoliukai').innerHTML += `<div style="background-color:yellow;" class="kamuoliukas">
+        ${skaicius}</div>`;
+        
+    } else if (skaicius >= 40 && skaicius <= 59) {
+        document.querySelector('.kamuoliukai').innerHTML += `<div style="background-color:red;" class="kamuoliukas">
+        ${skaicius}</div>`;
+        
+    } else if (skaicius >= 60 && skaicius <= 79) {
+        document.querySelector('.kamuoliukai').innerHTML += `<div style="background-color:blue;" class="kamuoliukas">
+        ${skaicius}</div>`;
+        
+    } else {
+        document.querySelector('.kamuoliukai').innerHTML += `<div style="background-color:green;" class="kamuoliukas">
+        ${skaicius}</div>`;
     }
     
-    document.querySelector('.result').textContent = `${array.join(` `)}`
-    document.innerHTML += `<div>${arrayFinal}</div>`;
-
+    if (skaicius === auksinis) {
+        return alert("Skambutis!");
+    }
 }
 
-
-
-
-
-// Skaičius atvaizduokite eilėje ir stilizuokite juos kaip kamuoliukus.
-
-// Kiekvieną kartą paspaudus ant mygtuko "išridenamas kamuoliukas".
 

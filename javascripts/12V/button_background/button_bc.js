@@ -1,9 +1,9 @@
-document.querySelector('#blue').addEventListener('click', function onClick() {
+document.querySelector('#blue').addEventListener('click',  () =>  {
     document.body.style.backgroundColor = 'blue';
 })
-document.querySelector('#red').addEventListener('click', function onClick() {
+document.querySelector('#red').addEventListener('click', () => {
     document.body.style.backgroundColor = 'red';
 })
-document.querySelector('#white').addEventListener('click', function onClick() {
-    document.body.style.backgroundColor = 'white';
+document.querySelector('#white').addEventListener('click', () => {
+    document.querySelector('body').style.backgroundColor = 'white';
 })
