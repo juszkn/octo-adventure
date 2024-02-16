@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>button</title>
+<!-- JS script -->
+    <script src="gog.js" defer></script>
+<!-- CSS -->
+    <style>
+        body {
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+            height: 600px;
+            background-color: black;
+            position: relative;
+        }
+
+        .game {
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: 0;
+            background-color: white;
+            position: absolute;
+        }
+
+        .timer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="result">
+    <h1> Rezultatai </h1>
+    <p class="resultatas">Zaidima laimejo:</p>
+</div>
+
+<div class="box">
+    <div class="game"></div>
+    <div class="timer" style="color: white"></div>
+</div>
+
+
+</body>
+</html>
