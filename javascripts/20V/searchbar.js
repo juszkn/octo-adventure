@@ -11,7 +11,7 @@
 // Paspaudus ant frazės paieškos laukelyje užpildykite 
 // pasirinktą sakinį.
 
-const phrases = [
+const examples = [
     'What is my IP',
     'How many weeks in a year',
     'How many ounces in a cup',
@@ -24,24 +24,47 @@ const phrases = [
     'When is Thanksgiving'
 ];
 
-document.querySelector('input').oninput = (e) => {
-    const text = e.target.value.toLowerCase();
-    
-    const filteredPhrases = phrases
-        .filter(sentence => sentence.toLowerCase().includes(text))
-        .slice(0, 5);
 
-    const html = filteredPhrases.map(value => `<li>${value}</li>`).join('');
+// 2 variantas
 
-    document.querySelector('.autocomplete').innerHTML = html;
-
-    document.querySelectorAll('li').forEach(el => {
-        el.onclick = (e) => {
-            // console.log(e.target.textContent);
-            // Naujos reikšmės laukelyje priskyrimas            
-            document.querySelector('input').value = e.target.textContent;
-            // Pasiūlymų išvalymas
-            document.querySelector('.autocomplete').innerHTML = '';
-        };
+function handleInput(e) {
+    let naujasSakinys = e.target.value.toLowerCase();
+    const newExamples = examples.filter(function (sakinys) {
+        return sakinys.toLowerCase().includes(naujasSakinys);
     });
-};
+    
+    let slicedExample= newExamples.slice(0, 5); 
+    
+    let htmlExample= slicedExample.map(function (sakinys){
+        return `<div>${sakinys}</div>`;
+    });
+    document.querySelector('.autocomplete').innerHTML = htmlExample.join('');
+}
+function handleClick(e){
+    document.querySelector('input').value = e.target.textContent;
+}
+
+
+
+
+// document.querySelector('input').oninput = (e) => {
+//     const text = e.target.value.toLowerCase();
+//    
+//     const filteredPhrases = phrases
+//         .filter(sentence => sentence.toLowerCase().includes(text))
+//         .slice(0, 5);
+//
+//     const html = filteredPhrases.map(value => `<li>${value}</li>`).join('');
+//
+//     document.querySelector('.autocomplete').innerHTML = html;
+//
+//     document.querySelectorAll('li').forEach(el => {
+//         el.onclick = (e) => {
+//             // console.log(e.target.textContent);
+//             // Naujos reikšmės laukelyje priskyrimas            
+//             document.querySelector('input').value = e.target.textContent;
+//             // Pasiūlymų išvalymas
+//             document.querySelector('.autocomplete').innerHTML = '';
+//         };
+//     });
+// };
