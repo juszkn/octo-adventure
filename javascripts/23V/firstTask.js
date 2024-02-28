@@ -1,4 +1,5 @@
 
+
 // Sukurkite mygtuką “Atnešk nuotrauką” ant kurio paspaudus vartotojui atvaizduojama atsitiktinė šuns nuotrauka.
 // Nuotraukos adresui gauti naudokite nemokamą API:
 // https://dog.ceo/dog-api/
@@ -26,13 +27,18 @@ document.querySelector('.fetchDog').onclick = () => {
 // Pasinaudodami nemokamu API https://randomfox.ca/ sukurkite aplikaciją kuri atvaizduotų atsitiktinės lapės nuotrauką. 
 // Po ja pavaizduokite mygtuką “Atnaujinti” ant kurio paspaudus būtų gaunama vis nauja nuotrauka.
 
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 document.querySelector('.fetchFox').onclick = () => {
-    fetch("https://randomfox.ca/images/98.jpg")
-        .then(receive => receive.json())
-        .then(receive => {
-            console.log(receive)
-            document.querySelector('.image-container-fox').innerHTML = `<img src="${receive.message}" alt="">`;
+    fetch("https://randomfox.ca/floof/")
+        .then(res => res.json())
+        .then(data => {
+            // console.log(receive)
+            document.querySelector('.image-container-fox').innerHTML = `<img src="${data.message}" alt="">`;
         })
 }
 
